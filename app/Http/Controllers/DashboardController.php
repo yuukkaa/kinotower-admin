@@ -24,7 +24,7 @@ class DashboardController extends Controller
                 'ratings' => Rating::count(),
             ],
             'categories' => Category::with('parent')->orderBy('id')->take(8)->get(),
-            'countries' => Country::orderBy('name')->take(8)->get(),
+            'countries' => Country::orderBy('id')->take(8)->get(),
         ]);
     }
 }

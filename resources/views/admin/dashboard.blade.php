@@ -25,11 +25,14 @@
             <div class="small-box bg-success">
                 <div class="inner">
                     <h3>{{ $stats['categories'] }}</h3>
-                    <p>Категории</p>
+                    <p>Жанры</p>
                 </div>
                 <div class="icon">
                     <i class="fas fa-tags"></i>
                 </div>
+                <a href="{{ route('admin.categories.index') }}" class="small-box-footer">
+                    Перейти <i class="fas fa-arrow-circle-right"></i>
+                </a>
             </div>
         </div>
 
@@ -42,6 +45,9 @@
                 <div class="icon">
                     <i class="fas fa-globe"></i>
                 </div>
+                <a href="{{ route('admin.countries.index') }}" class="small-box-footer">
+                    Перейти <i class="fas fa-arrow-circle-right"></i>
+                </a>
             </div>
         </div>
 
@@ -100,7 +106,7 @@
                         <tbody>
                             @forelse ($categories as $category)
                                 <tr>
-                                    <td>{{ $category->id }}</td>
+                                    <td>{{ $loop->iteration }}</td>
                                     <td>{{ $category->name }}</td>
                                     <td>{{ $category->parent?->name ?? '—' }}</td>
                                 </tr>
@@ -131,7 +137,7 @@
                         <tbody>
                             @forelse ($countries as $country)
                                 <tr>
-                                    <td>{{ $country->id }}</td>
+                                    <td>{{ $loop->iteration }}</td>
                                     <td>{{ $country->name }}</td>
                                 </tr>
                             @empty

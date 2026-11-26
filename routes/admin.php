@@ -2,8 +2,10 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CategoryFilmController;
 use App\Http\Controllers\CountryController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\FilmController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('guest:admin')->group(function () {
@@ -22,4 +24,12 @@ Route::middleware('auth:admin')->group(function () {
     Route::resource('categories', CategoryController::class)
         ->except(['show'])
         ->names('admin.categories');
+
+    Route::resource('films', FilmController::class)
+        ->except(['show'])
+        ->names('admin.films');
+
+    Route::resource('films.categories', CategoryFilmController::class)
+        ->only(['index', 'create', 'store', 'destroy'])
+        ->names('admin.films.categories');
 });

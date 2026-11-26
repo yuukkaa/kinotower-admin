@@ -18,6 +18,9 @@
                 <div class="icon">
                     <i class="fas fa-video"></i>
                 </div>
+                <a href="{{ route('admin.films.index') }}" class="small-box-footer">
+                    Перейти <i class="fas fa-arrow-circle-right"></i>
+                </a>
             </div>
         </div>
 

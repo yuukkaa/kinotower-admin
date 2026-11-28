@@ -1,0 +1,15 @@
+meta {
+  name: Get Film Reviews
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/api/v1/films/1/reviews
+  body: none
+  auth: none
+}
+
+headers {
+  Accept: application/json
+}

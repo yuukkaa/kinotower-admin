@@ -1,0 +1,25 @@
+meta {
+  name: Get Films
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/v1/films?page=1&size=10&sortBy=name&sortDir=asc
+  body: none
+  auth: none
+}
+
+params:query {
+  page: 1
+  size: 10
+  sortBy: name
+  sortDir: asc
+  ~category: 0
+  ~country: 0
+  ~search: 
+}
+
+headers {
+  Accept: application/json
+}

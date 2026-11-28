@@ -1,0 +1,29 @@
+meta {
+  name: Update User
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{baseUrl}}/api/v1/users
+  body: json
+  auth: bearer
+}
+
+headers {
+  Accept: application/json
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "fio": "Иванов Алексей Сергеевич",
+    "email": "alexey.ivanov@example.com",
+    "birthday": "1995-04-12",
+    "gender_id": 1
+  }
+}

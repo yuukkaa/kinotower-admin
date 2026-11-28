@@ -1,0 +1,19 @@
+meta {
+  name: Delete User Review
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{baseUrl}}/api/v1/users/{{userId}}/reviews/{{reviewId}}
+  body: none
+  auth: bearer
+}
+
+headers {
+  Accept: application/json
+}
+
+auth:bearer {
+  token: {{token}}
+}

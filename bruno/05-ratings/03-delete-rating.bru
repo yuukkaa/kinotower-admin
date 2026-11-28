@@ -1,0 +1,19 @@
+meta {
+  name: Delete User Rating
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{baseUrl}}/api/v1/users/{{userId}}/ratings/{{ratingId}}
+  body: none
+  auth: bearer
+}
+
+headers {
+  Accept: application/json
+}
+
+auth:bearer {
+  token: {{token}}
+}

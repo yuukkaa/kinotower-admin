@@ -70,7 +70,7 @@
                         <th style="width: 90px">Год</th>
                         <th style="width: 110px">Длит.</th>
                         <th style="width: 80px">Возраст</th>
-                        <th style="width: 190px" class="text-right">Действия</th>
+                        <th style="width: 240px" class="text-right">Действия</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -111,6 +111,12 @@
                             <td class="text-right text-nowrap">
                                 <a href="{{ route('admin.films.categories.index', $film) }}" class="btn btn-sm btn-warning" title="Жанры фильма">
                                     <i class="fas fa-tags"></i>
+                                </a>
+                                <a href="{{ route('admin.films.reviews.index', $film) }}" class="btn btn-sm btn-secondary" title="Отзывы к фильму">
+                                    <i class="fas fa-comments"></i>
+                                </a>
+                                <a href="{{ route('admin.films.ratings.index', $film) }}" class="btn btn-sm btn-dark" title="Оценки фильма">
+                                    <i class="fas fa-star"></i>
                                 </a>
                                 <a href="{{ route('admin.films.edit', $film) }}" class="btn btn-sm btn-info" title="Редактировать">
                                     <i class="fas fa-edit"></i>

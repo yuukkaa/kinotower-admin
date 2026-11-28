@@ -63,6 +63,9 @@
                 <div class="icon">
                     <i class="fas fa-users"></i>
                 </div>
+                <a href="{{ route('admin.users.index') }}" class="small-box-footer">
+                    Перейти <i class="fas fa-arrow-circle-right"></i>
+                </a>
             </div>
         </div>
 
@@ -75,6 +78,9 @@
                 <div class="icon">
                     <i class="fas fa-comments"></i>
                 </div>
+                <a href="{{ route('admin.reviews.index') }}" class="small-box-footer">
+                    Перейти <i class="fas fa-arrow-circle-right"></i>
+                </a>
             </div>
         </div>
 
@@ -87,6 +93,9 @@
                 <div class="icon">
                     <i class="fas fa-star"></i>
                 </div>
+                <a href="{{ route('admin.ratings.index') }}" class="small-box-footer">
+                    Перейти <i class="fas fa-arrow-circle-right"></i>
+                </a>
             </div>
         </div>
     </div>
